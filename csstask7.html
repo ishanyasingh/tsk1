@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(129, 17, 65);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            height: 800px;
+            margin: auto;
+            background-color: rgb(96, 3, 46);
+            text-align: center;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        form{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        form div {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content:space-between;
+        }
+        label{
+            margin-bottom: 5px;
+            color: white;
+        }
+        #radio input, label{
+            margin-left: 15px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 60%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        select{
+            background-color: rgb(185, 185, 185);
+        }
+        option{
+            text-align: center;
+        }
+        #reg{
+            width: 100%;
+            height: 40px;
+            font-weight: bolder;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" placeholder="your name" id="name"/>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" placeholder="your email" id="email"/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" placeholder="Password" id="password"/>
+            </div>
+            <div>
+                <label for="phno">Phone Number:</label>
+                <input type="text" id="phno" />
+            </div>
+            <div>
+                <div>
+                    <label for="gender">Gender:</label>
+                </div>
+                <div id="radio">
+                    <label for="male">Male: </label>
+                    <input type="radio" id="male" name="gender"/>
+                    <label for="female">Female: </label>
+                    <input type="radio" id="female" name="gender"/>
+                    <label for="others">Others: </label>
+                    <input type="radio" id="others" name="gender"/>
+                </div>
+            </div>
+            <div>
+                <label for="language">Language:</label>
+                <select name="language" id="language">
+                    <option>Select language</option>
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="telugu">Telugu</option>
+                </select>
+            </div>
+            <div>
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode" />
+            </div>
+            <div>
+                <label for="about">About:</label>
+                <textarea placeholder="Write about yourself ..." id="about" cols="30" rows="3"></textarea>
+            </div>
+            <input type="submit" value="Register" id="reg">
+        </form>
+    </div>
+</body>
+</html>
